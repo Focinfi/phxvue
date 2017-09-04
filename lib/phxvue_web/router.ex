@@ -19,6 +19,12 @@ defmodule PhxvueWeb.Router do
     get "/", PageController, :index
   end
 
+  scope "/admin", PhxvueWeb do
+    # pipe_through :api
+
+    get "/menu_items", MenuController, :items
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", PhxvueWeb do
   #   pipe_through :api
