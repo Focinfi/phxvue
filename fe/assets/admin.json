@@ -1,0 +1,27 @@
+{
+  "menus":[
+    {
+      "name": "Production Management",
+      "items": [
+        {
+          "name": "Products",
+          "new": {
+          },
+          "show": {
+            "clomumns": ["id", "name", "price", "created_at"],
+            "pageCount": 20,
+            "search": ["name"],
+            "actions": [
+              {
+                "name": "Close"
+              }
+            ]
+          },
+          "edit": {
+    
+          }
+        }    
+      ]
+    }
+  ]
+}
