@@ -1,13 +1,20 @@
 <template>
   <div id="app">
-  {{ msg }}
-  {{ msg }}
+    <hello/>  
+    {{ msg }}
+    <br>
+    <el-button>Hello</el-button>
   </div>
 </template>
 
 <script>
+import Hello from './containers/Hello.vue'
+
 export default {
   name: 'app',
+  components: {
+    Hello
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
