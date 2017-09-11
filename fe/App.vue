@@ -1,19 +1,20 @@
 <template>
   <div id="app">
-    <hello/>  
-    {{ msg }}
-    <br>
-    <el-button>Hello</el-button>
+    <slideBar/>
+    <div class="dashboard">
+      <headerBar/>
+    </div>
   </div>
 </template>
 
 <script>
-import Hello from './containers/Hello.vue'
+import SlideBar from './containers/SlideBar.vue'
+import HeaderBar from './containers/HeaderBar.vue'
 
 export default {
   name: 'app',
   components: {
-    Hello
+    SlideBar, HeaderBar
   },
   data () {
     return {
@@ -24,13 +25,26 @@ export default {
 </script>
 
 <style>
+html, body, main {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.dashboard{
+  width: calc(100% - 250px);
+  height: 100%;
 }
 
 h1, h2 {
