@@ -24,6 +24,7 @@ export default {
   height: 100%;
   width: 250px;
   background-color: lightgreen;
+  box-shadow: 1px 0px 2px #cccccc;
 }
 .home {
   height: 150px;

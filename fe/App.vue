@@ -2,7 +2,8 @@
   <div id="app">
     <slideBar/>
     <div class="dashboard">
-      <headerBar/>
+      <headerBar resName="Products"/>
+      <showView resName="Products"/>
     </div>
   </div>
 </template>
@@ -10,11 +11,12 @@
 <script>
 import SlideBar from './containers/SlideBar.vue'
 import HeaderBar from './containers/HeaderBar.vue'
+import ShowView from './containers/ShowView.vue'
 
 export default {
   name: 'app',
   components: {
-    SlideBar, HeaderBar
+    SlideBar, HeaderBar, ShowView
   },
   data () {
     return {
@@ -35,7 +37,6 @@ html, body, main {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   width: 100%;
   height: 100%;
@@ -45,23 +46,5 @@ html, body, main {
 .dashboard{
   width: calc(100% - 250px);
   height: 100%;
-}
-
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
 }
 </style>
